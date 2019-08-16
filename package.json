@@ -1,10 +1,12 @@
 {
-  "name": "revolve-law-group",
+  "name": "revolve-web",
   "version": "0.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "now-build": "next build",
+    "start": "next start",
+    "deploy": "now && now --target production && now rm revolve-web --safe --yes"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
