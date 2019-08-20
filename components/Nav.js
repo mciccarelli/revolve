@@ -2,7 +2,7 @@ import cx from 'classnames';
 
 const Nav = ({ sticky }) => {
   return (
-    <nav className={cx('nav p-4', { 'nav--sticky': sticky })}>
+    <nav className={cx('nav', { 'nav--sticky': sticky })}>
       <ul className="flex justify-between items-center ">
         <li>
           <img src="/static/logo.svg" />
@@ -20,6 +20,7 @@ const Nav = ({ sticky }) => {
           width: 100%;
           height: var(--navbar-height);
           background: black;
+          padding: 20px 1rem;
         }
 
         .nav--sticky {
