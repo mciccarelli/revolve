@@ -1,6 +1,8 @@
-export default function Nav() {
+import cx from 'classnames';
+
+const Nav = ({ sticky }) => {
   return (
-    <nav className="p-4">
+    <nav className={cx('nav p-4', { 'nav--sticky': sticky })}>
       <ul className="flex justify-between items-center ">
         <li>
           <img src="/static/logo.svg" />
@@ -10,12 +12,20 @@ export default function Nav() {
         </div>
       </ul>
       <style jsx>{`
-        nav {
-          position: fixed;
+        .nav {
+          position: absolute;
           left: 0;
           bottom: 0;
+          z-index: 99;
           width: 100%;
           height: var(--navbar-height);
+          background: black;
+        }
+
+        .nav--sticky {
+          position: fixed;
+          top: 0;
+          bottom: auto;
         }
 
         ul {
@@ -25,4 +35,6 @@ export default function Nav() {
       `}</style>
     </nav>
   );
-}
+};
+
+export default Nav;

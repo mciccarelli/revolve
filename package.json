@@ -6,13 +6,15 @@
     "build": "next build",
     "now-build": "next build",
     "start": "next start",
-    "deploy": "now && now --target production && now rm revolve-web --safe --yes"
+    "deploy": "now && now --target production && now rm revolve --safe --yes"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
+    "classnames": "^2.2.6",
     "next": "latest",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-use-dimensions": "^1.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.6.1",

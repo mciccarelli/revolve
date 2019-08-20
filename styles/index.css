@@ -15,10 +15,11 @@ body {
 }
 
 .hero {
-  @apply .text-white .py-2 .px-4 .flex .flex .items-center .justify-center;
-  min-height: 100vh;
+  @apply .text-white .py-2 .px-4 .flex .items-center .justify-center;
   width: 100%;
+  min-height: 100vh;
   position: relative;
+  background-visibility: hidden;
 }
 
 .hero__arrow {
