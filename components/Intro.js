@@ -33,6 +33,7 @@ export default () => (
     variants={container}
     initial="hidden"
     animate="visible"
+    className="intro"
     width="591"
     height="564"
     xmlns="http://www.w3.org/2000/svg"
@@ -62,35 +63,5 @@ export default () => (
         />
       </motion.g>
     </g>
-    <style jsx>{`
-      svg {
-        max-width: 590px;
-      }
-
-      .cls-1 {
-        fill: #fff;
-      }
-
-      #logo {
-        /*animation: rotating 2s linear infinite;*/
-      }
-
-      @keyframes rotating {
-        from {
-          -ms-transform: rotate(0deg);
-          -moz-transform: rotate(0deg);
-          -webkit-transform: rotate(0deg);
-          -o-transform: rotate(0deg);
-          transform: rotate(0deg);
-        }
-        to {
-          -ms-transform: rotate(360deg);
-          -moz-transform: rotate(360deg);
-          -webkit-transform: rotate(360deg);
-          -o-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    `}</style>
   </motion.svg>
 );

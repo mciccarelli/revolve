@@ -14,12 +14,18 @@ export default () => {
         <Intro />
         <img className="hero__arrow" src="/static/arrow-down.svg" />
       </Hero>
-      <section id="principles" className="flex items-center justify-center">
-        target div at ({x}px, {y}px) position with a width of {width}px and
-        height of {height}px
+      <section id="principles" className="flex flex-col py-12">
+        <h2 className="text-center">
+          Our principles <br />
+          guide our every move
+        </h2>
       </section>
-      <section id="areas">{` `}</section>
-      <section id="team">{``}</section>
+      <section id="areas" className="flex flex-col py-12">
+        <h2 className="text-center">Areas of expertise</h2>
+      </section>
+      <section id="team" className="flex flex-col py-12">
+        <h2 className="text-center text-white">The team</h2>
+      </section>
       <section id="footer">{` `}</section>
       <style jsx>{`
         section {
@@ -33,6 +39,9 @@ export default () => {
         }
         #team {
           background-color: black;
+        }
+        #footer {
+          min-height: 50vh;
         }
       `}</style>
     </div>

@@ -29,9 +29,28 @@ body {
   bottom: 30px;
   right: 50%;
   z-index: 100;
-  transform: translateX(-28%);
+  transform: translateX(45%);
   width: 36.393px;
   height: 29.943px;
+}
+
+.intro {
+  transform: translateX(28px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply .tracking-wider;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 30px;
 }
 
 .rotating {

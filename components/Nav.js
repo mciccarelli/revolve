@@ -8,7 +8,7 @@ const Nav = ({ sticky }) => {
           <img src="/static/logo.svg" />
         </li>
         <div className="flex justify-between items-center">
-          <h1>A LAW FIRM BASED IN IRVINE, CALIFORNIA</h1>
+          <h1>A Law Firm based in Irvine, California</h1>
         </div>
       </ul>
       <style jsx>{`
@@ -36,7 +36,7 @@ const Nav = ({ sticky }) => {
 
         h1 {
           font-size: 12px;
-          letter-spacing: 0.5px;
+          font-weight: 400;
         }
       `}</style>
     </nav>
