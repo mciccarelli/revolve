@@ -19,7 +19,7 @@ export default () => {
         height of {height}px
       </section>
       <section id="areas">{` `}</section>
-      <section id="team">{` `}</section>
+      <section id="team">{``}</section>
       <section id="footer">{` `}</section>
       <style jsx>{`
         section {
