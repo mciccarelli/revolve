@@ -10,6 +10,8 @@
 }
 
 body {
+  font-family: 'Cosmica';
+  font-weighy: 400;
   background: black;
   color: white;
 }
@@ -27,13 +29,14 @@ body {
   bottom: 30px;
   right: 50%;
   z-index: 100;
-  transform: translateX(-50%);
+  transform: translateX(-28%);
   width: 36.393px;
   height: 29.943px;
 }
 
 .rotating {
   animation: rotating 3s linear infinite;
+  will-change: transform;
 }
 
 @keyframes rotating {
@@ -53,22 +56,34 @@ body {
   }
 }
 
-.container {
-  width: 150px;
-  height: 150px;
-  display: grid;
-  overflow: hidden;
-  margin: 0;
-  list-style: none;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+@font-face {
+  font-family: 'Cosmica';
+  src: url('/static/fonts/Cosmica-Book.woff2') format('woff2'),
+    url('/static/fonts/Cosmica-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-.item {
-  background: white;
-  border-radius: 100%;
+@font-face {
+  font-family: 'Cosmica';
+  src: url('/static/fonts/Cosmica-Extrabold.woff2') format('woff2'),
+    url('/static/fonts/Cosmica-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cosmica';
+  src: url('/static/fonts/Cosmica-Heavy.woff2') format('woff2'),
+    url('/static/fonts/Cosmica-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cosmica';
+  src: url('/static/fonts/Cosmica-Medium.woff2') format('woff2'),
+    url('/static/fonts/Cosmica-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }

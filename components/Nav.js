@@ -33,6 +33,11 @@ const Nav = ({ sticky }) => {
           max-width: 1200px;
           margin: 0 auto;
         }
+
+        h1 {
+          font-size: 12px;
+          letter-spacing: 0.5px;
+        }
       `}</style>
     </nav>
   );
