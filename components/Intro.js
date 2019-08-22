@@ -20,12 +20,16 @@ const row = {
   visible: {
     pathLength: 1,
     fill: 'rgba(255, 255, 255, 1)',
+    transition: { duration: 2 },
   },
 };
 
 const logo = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 2 },
+  },
 };
 
 export default () => (
