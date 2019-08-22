@@ -38,6 +38,18 @@ body {
   transform: translateX(28px);
 }
 
+.footer__logo {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  max-width: 574px;
+  width: 100%;
+  height: auto;
+  margin-left: -18%;
+  animation: rotating 6s linear infinite;
+  will-change: transform;
+}
+
 h1,
 h2,
 h3,
