@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default () => (
+export default ({ active }) => (
   <svg
     width="251px"
     height="252px"
@@ -9,10 +9,9 @@ export default () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <motion.g
-      animate={{
-        rotate: [0, 90, 180, 270, 360],
-        transition: { infinite: true },
-      }}
+      initial={false}
+      animate={{ rotate: active ? 360 : 0 }}
+      transition={{ duration: 3 }}
       fill="none"
       fillRule="evenodd"
     >

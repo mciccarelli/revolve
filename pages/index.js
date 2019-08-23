@@ -1,4 +1,6 @@
 import useDimensions from 'react-use-dimensions';
+import { useViewportScroll } from 'framer-motion';
+
 import {
   Nav,
   Hero,
@@ -10,7 +12,12 @@ import {
 } from '../components';
 
 const HomePage = () => {
-  const [ref, { x, y, width, height }] = useDimensions();
+  const [ref, { y, height }] = useDimensions();
+  // const { scrollYProgress } = useViewportScroll();
+
+  // console.log('scrollYProgress', scrollYProgress);
+  // console.log('y', y);
+
   // NOTE: offset by nav height (65) and fix position
   // when y scroll progress hits bottom of hero
   const navIsSticky = height - 65 <= Math.abs(y);
