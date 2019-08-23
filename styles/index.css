@@ -65,6 +65,17 @@ h2 {
   font-size: 30px;
 }
 
+section {
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  padding: 150px 0;
+}
+
+section h2 {
+  margin-bottom: 150px;
+}
+
 .rotating {
   animation: rotating 3s linear infinite;
   will-change: transform;
