@@ -1,17 +1,51 @@
 import { motion } from 'framer-motion';
 
-export default ({ active }) => (
+const getCurrRotation = index => {
+  switch (index) {
+    case 0:
+      return 0;
+    case 1:
+      return -60;
+    case 2:
+      return -120;
+    case 3:
+      return -180;
+    case 4:
+      return -240;
+    case 5:
+      return -300;
+    default:
+      return 360;
+  }
+};
+
+export default ({ active, setActive }) => (
   <svg
-    width="651px"
-    height="695px"
-    viewBox="0 0 651 695"
+    width="800px"
+    height="800px"
+    viewBox="0 0 800 800"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g fill="none" fillRule="evenodd">
-      <g id="WHEEL" transform="translate(-8.000000, -5.000000)">
+    <motion.g
+      initial={false}
+      animate={{ rotate: getCurrRotation(active) }}
+      transition={{ duration: 1 }}
+      id="Page-1"
+      fill="none"
+      fillRule="evenodd"
+    >
+      <g id="WHEEL">
+        <rect
+          id="Rectangle"
+          fill="#F4F4F4"
+          x="0"
+          y="0"
+          width="800"
+          height="800"
+        />
         <path
-          d="M36,351.768 C36,187.868 168.867,55 332.768,55 C496.667,55 629.535,187.868 629.535,351.768 C629.535,515.668 496.667,648.536 332.768,648.536 C168.867,648.536 36,515.668 36,351.768 Z"
+          d="M103,399.768 C103,235.868 235.867,103 399.768,103 C563.667,103 696.535,235.868 696.535,399.768 C696.535,563.668 563.667,696.536 399.768,696.536 C235.867,696.536 103,563.668 103,399.768 Z"
           id="CIRCLE"
           stroke="#000000"
           strokeWidth="4"
@@ -19,17 +53,12 @@ export default ({ active }) => (
           strokeLinejoin="round"
           strokeDasharray="0,13.04"
         />
-        <motion.g
-          initial={false}
-          animate={{ rotate: active ? 360 : 0 }}
-          transition={{ duration: 3 }}
-          id="TEXT"
-          transform="translate(0.886144, 0.236862)"
-        >
+        <g id="TEXT" transform="translate(67.000000, 47.000000)">
           <g
             id="CURIOSITY"
             transform="translate(0.000000, 132.501386)"
-            fill="#DDDDDD"
+            fill={active === 5 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(5)}
           >
             <text
               id="C"
@@ -107,13 +136,14 @@ export default ({ active }) => (
           <g
             id="WIT"
             transform="translate(17.735425, 502.821910)"
-            fill="#DDDDDD"
+            fill={active === 4 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(4)}
           >
             <text
               id="W"
-              transform="translate(23.888430, 30.091229) rotate(-121.944753) translate(-23.888430, -30.091229) "
+              transform="translate(23.873296, 30.100665) rotate(-121.944753) translate(-23.873296, -30.100665) "
             >
-              <tspan x="14.3722939" y="36.5733936">
+              <tspan x="14.35716" y="36.6006649">
                 W
               </tspan>
             </text>
@@ -137,7 +167,8 @@ export default ({ active }) => (
           <g
             id="INTEGRITY"
             transform="translate(277.986766, 677.154788)"
-            fill="#DDDDDD"
+            fill={active === 3 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(3)}
           >
             <text
               id="I"
@@ -215,7 +246,8 @@ export default ({ active }) => (
           <g
             id="COMPASSION"
             transform="translate(579.156907, 454.418260)"
-            fill="#DDDDDD"
+            fill={active === 2 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(2)}
           >
             <text
               id="C"
@@ -301,7 +333,8 @@ export default ({ active }) => (
           <g
             id="CIVILITY"
             transform="translate(590.633856, 136.803138)"
-            fill="#DDDDDD"
+            fill={active === 1 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(1)}
           >
             <text
               id="C"
@@ -371,7 +404,8 @@ export default ({ active }) => (
           <g
             id="DETERMINATION"
             transform="translate(241.920589, 0.000000)"
-            fill="#000000"
+            fill={active === 0 ? '#000000' : '#dddddd'}
+            onClick={() => setActive(0)}
           >
             <text
               id="D"
@@ -478,14 +512,18 @@ export default ({ active }) => (
               </tspan>
             </text>
           </g>
-        </motion.g>
+        </g>
       </g>
-    </g>
+    </motion.g>
 
     <style jsx>{`
       svg {
         font-size: 18px;
         font-weight: 900;
+      }
+
+      #TEXT > g {
+        cursor: pointer;
       }
     `}</style>
   </svg>

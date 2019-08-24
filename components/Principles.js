@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Wheel } from './';
 
 const items = [
@@ -12,16 +14,15 @@ const items = [
       'Uncivil conduct leads to grave mistakes. We heed our grandmas’ advice: be kind, be courteous, act ethically and no mudslinging. Effective counsel hinges on respect.',
   },
   {
-    header: 'INTEGRITY',
-    body:
-      'We are who we say we are. We do what we say we will do. It’s just that simple.',
-  },
-  {
     header: 'COMPASSION',
     body:
       'Law is emotionally taxing and physically exhausting. And that’s how we feel about it. We get that it is worse for you and we won’t forget it.',
   },
-
+  {
+    header: 'INTEGRITY',
+    body:
+      'We are who we say we are. We do what we say we will do. It’s just that simple.',
+  },
   {
     header: 'HUMOR',
     body:
@@ -35,6 +36,31 @@ const items = [
 ];
 
 const Principles = () => {
+  const [active, set] = useState(0);
+  const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowText(true);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [, active]);
+
+  const setActive = i => {
+    if (active === i) return;
+    setShowText(false);
+    setTimeout(() => set(i), 300);
+  };
+
+  const bodyTextVariants = {
+    hidden: { opacity: 0, scale: 0.2, transition: { duration: 0.3 } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.3, delay: 0.6 },
+    },
+  };
+
   return (
     <section id="principles" className="flex flex-col">
       <div className="container mx-auto">
@@ -43,9 +69,15 @@ const Principles = () => {
           guide our every move
         </h2>
         <div className="flex items-center justify-center relative">
-          <Wheel />
+          <Wheel active={active} setActive={setActive} />
           <div className="body">
-            <p>{items[0].body}</p>
+            <motion.div
+              initial="visible"
+              animate={showText ? 'visible' : 'hidden'}
+              variants={bodyTextVariants}
+            >
+              <p>{items[active].body}</p>
+            </motion.div>
           </div>
         </div>
       </div>

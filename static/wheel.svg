@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="651px" height="695px" viewBox="0 0 651 695" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="800px" height="800px" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
     <title>WHEEL</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="WHEEL" transform="translate(-8.000000, -5.000000)">
-            <path d="M36,351.768 C36,187.868 168.867,55 332.768,55 C496.667,55 629.535,187.868 629.535,351.768 C629.535,515.668 496.667,648.536 332.768,648.536 C168.867,648.536 36,515.668 36,351.768 Z" id="CIRCLE" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,13.04"></path>
-            <g id="TEXT" transform="translate(0.886144, 0.236862)" font-family="Cosmica-Extrabold, Cosmica" font-size="16" font-weight="600">
+        <g id="WHEEL">
+            <rect id="Rectangle" fill="#F4F4F4" x="0" y="0" width="800" height="800"></rect>
+            <path d="M103,399.768 C103,235.868 235.867,103 399.768,103 C563.667,103 696.535,235.868 696.535,399.768 C696.535,563.668 563.667,696.536 399.768,696.536 C235.867,696.536 103,563.668 103,399.768 Z" id="CIRCLE" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,13.04"></path>
+            <g id="TEXT" transform="translate(67.000000, 47.000000)" font-family="Cosmica-Extrabold, Cosmica" font-size="16" font-weight="600">
                 <g id="CURIOSITY" transform="translate(0.000000, 132.501386)" fill="#DDDDDD">
                     <text id="C" transform="translate(13.500000, 94.593091) rotate(-68.530000) translate(-13.500000, -94.593091) ">
                         <tspan x="6" y="101.093091">C</tspan>
@@ -37,8 +38,8 @@
                     </text>
                 </g>
                 <g id="WIT" transform="translate(17.735425, 502.821910)" fill="#DDDDDD">
-                    <text id="W" transform="translate(23.888430, 30.091229) rotate(-121.944753) translate(-23.888430, -30.091229) ">
-                        <tspan x="14.3722939" y="36.5733936">W</tspan>
+                    <text id="W" transform="translate(23.873296, 30.100665) rotate(-121.944753) translate(-23.873296, -30.100665) ">
+                        <tspan x="14.35716" y="36.6006649">W</tspan>
                     </text>
                     <text id="I" transform="translate(17.013430, 18.691229) rotate(-119.886527) translate(-17.013430, -18.691229) ">
                         <tspan x="14.003098" y="25.1550658">I</tspan>

@@ -76,6 +76,10 @@ section h2 {
   margin-bottom: 150px;
 }
 
+svg {
+  user-select: none;
+}
+
 .rotating {
   animation: rotating 3s linear infinite;
   will-change: transform;

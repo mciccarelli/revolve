@@ -14,10 +14,12 @@ const container = {
 
 const row = {
   hidden: {
+    scale: 0.2,
     pathLength: 0,
     fill: 'rgba(255, 255, 255, 0)',
   },
   visible: {
+    scale: 1,
     pathLength: 1,
     fill: 'rgba(255, 255, 255, 1)',
     transition: { duration: 2 },
@@ -25,10 +27,11 @@ const row = {
 };
 
 const logo = {
-  hidden: { opacity: 0 },
+  hidden: { scale: 0.2, opacity: 0 },
   visible: {
+    scale: 1,
     opacity: 1,
-    transition: { duration: 2 },
+    transition: { duration: 2, delay: 3 },
   },
 };
 

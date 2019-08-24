@@ -6,7 +6,7 @@
     "build": "next build",
     "now-build": "next build",
     "start": "next start",
-    "deploy": "now && now --target production && now rm revolve --safe --yes"
+    "deploy": "now && now --prod && now rm revolve --safe --yes"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",

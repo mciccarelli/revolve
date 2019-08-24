@@ -1,5 +1,5 @@
 import { useState } from 'react';
-//import { useViewportScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   IconTaxLaw,
   IconCivilLitigation,
@@ -32,14 +32,14 @@ const Areas = () => {
         <div className="flex flex-wrap">
           {items.map((item, index) => {
             return (
-              <div
+              <motion.div
                 key={index}
-                onMouseEnter={() => setActive(index)}
-                onMouseLeave={() => setActive(null)}
                 className="w-full md:w-1/2 lg:w-1/3 flex justify-center mb-12"
+                onHoverStart={() => setActive(index)}
+                onHoverEnd={() => setActive(null)}
               >
                 {item.component(active === index)}
-              </div>
+              </motion.div>
             );
           })}
         </div>
