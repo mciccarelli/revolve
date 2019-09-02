@@ -35,8 +35,18 @@ const items = [
   },
 ];
 
+const positions = [
+  { a: 0, b: -360 },
+  { a: -60, b: -60 },
+  { a: -120, b: -120 },
+  { a: -180, b: -180 },
+  { a: -240, b: -240 },
+  { a: -300, b: -300 },
+];
+
 const Principles = () => {
-  const [active, set] = useState(0);
+  const [active, setActive] = useState(0);
+  const [rotate, setRotate] = useState(0);
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
@@ -46,17 +56,22 @@ const Principles = () => {
     return () => clearTimeout(timer);
   }, [, active]);
 
-  const setActive = i => {
+  const handleTabClick = i => {
     if (active === i) return;
+    // hide body text
     setShowText(false);
-    setTimeout(() => set(i), 300);
+    // update rotation based on item in wheel
+    const r = active >= 3 ? positions[i].b : positions[i].a;
+    // update to next active item on .3s delay
+    setTimeout(() => setActive(i), 300);
+    // update rotation value .3s delay
+    setTimeout(() => setRotate(r), 300);
   };
 
   const bodyTextVariants = {
-    hidden: { opacity: 0, scale: 0.2, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, transition: { duration: 0.3 } },
     visible: {
       opacity: 1,
-      scale: 1,
       transition: { duration: 0.3, delay: 0.6 },
     },
   };
@@ -69,7 +84,11 @@ const Principles = () => {
           guide our every move
         </h2>
         <div className="flex items-center justify-center relative">
-          <Wheel active={active} setActive={setActive} />
+          <Wheel
+            active={active}
+            rotate={rotate}
+            handleTabClick={handleTabClick}
+          />
           <div className="body">
             <motion.div
               initial="visible"
@@ -85,6 +104,9 @@ const Principles = () => {
       <style jsx>{`
         #principles {
           background-color: #f4f4f4;
+        }
+        #principles h2 {
+          margin-bottom: 100px;
         }
         .body {
           font-size: 28px;

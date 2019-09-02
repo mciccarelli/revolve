@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 
-export default ({ active }) => (
+export default ({ theta }) => (
   <svg
+    id="ICON_ENT"
     width="252px"
     height="251px"
     viewBox="0 0 252 251"
@@ -9,9 +10,10 @@ export default ({ active }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <motion.g
-      initial={false}
-      animate={{ rotate: active ? 360 : 0 }}
-      transition={{ duration: 3 }}
+      className="text"
+      style={{
+        transform: theta ? `rotate(${theta}deg)` : 'rotate(0deg)',
+      }}
       fill="none"
       fillRule="evenodd"
     >
@@ -164,6 +166,18 @@ export default ({ active }) => (
       svg {
         font-size: 18px;
         font-weight: 900;
+      }
+    `}</style>
+
+    <style jsx global>{`
+      #ICON_ENT {
+        font-size: 18px;
+        font-weight: 900;
+      }
+
+      #ICON_ENT .text {
+        transform-origin: 123.879px 127.176px 0px !important;
+        will-change: transform;
       }
     `}</style>
   </svg>

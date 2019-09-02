@@ -4,11 +4,9 @@ const Nav = ({ sticky }) => {
   return (
     <nav className={cx('nav', { 'nav--sticky': sticky })}>
       <ul className="flex justify-between items-center ">
-        <li>
-          <img src="/static/logo.svg" />
-        </li>
+        <h1>REVOLVE Law Group</h1>
         <div className="flex justify-between items-center">
-          <h1>A Law Firm based in Irvine, California</h1>
+          <h2>A Law Firm based in Irvine, California</h2>
         </div>
       </ul>
       <style jsx>{`
@@ -30,13 +28,18 @@ const Nav = ({ sticky }) => {
         }
 
         ul {
-          max-width: 1200px;
+          max-width: var(--max-width);
           margin: 0 auto;
         }
 
         h1 {
+          font-size: 16px;
+          font-weight: 900;
+        }
+
+        h2 {
           font-size: 12px;
-          font-weight: 400;
+          font-weight: 500;
         }
       `}</style>
     </nav>

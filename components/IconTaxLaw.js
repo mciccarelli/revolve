@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 
-export default ({ active }) => (
+export default ({ theta }) => (
   <svg
+    id="ICON_TAX_LAW"
     width="251px"
     height="252px"
     viewBox="0 0 251 252"
@@ -9,9 +10,10 @@ export default ({ active }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <motion.g
-      initial={false}
-      animate={{ rotate: active ? 360 : 0 }}
-      transition={{ duration: 3 }}
+      className="text"
+      style={{
+        transform: theta ? `rotate(${theta}deg)` : 'rotate(0deg)',
+      }}
       fill="none"
       fillRule="evenodd"
     >
@@ -76,10 +78,14 @@ export default ({ active }) => (
       />
     </g>
 
-    <style jsx>{`
-      svg {
+    <style jsx global>{`
+      #ICON_TAX_LAW {
         font-size: 18px;
         font-weight: 900;
+      }
+      #ICON_TAX_LAW .text {
+        transform-origin: 125.5px 125.746px 0px !important;
+        will-change: transform;
       }
     `}</style>
   </svg>

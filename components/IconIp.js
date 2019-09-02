@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 
-export default ({ active }) => (
+export default ({ theta }) => (
   <svg
+    id="ICON_IP"
     width="252px"
     height="252px"
     viewBox="0 0 252 252"
@@ -9,9 +10,10 @@ export default ({ active }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <motion.g
-      initial={false}
-      animate={{ rotate: active ? 360 : 0 }}
-      transition={{ duration: 3 }}
+      className="text"
+      style={{
+        transform: theta ? `rotate(${theta}deg)` : 'rotate(0deg)',
+      }}
       fill="none"
       fillRule="evenodd"
     >
@@ -195,10 +197,14 @@ export default ({ active }) => (
       <rect id="Rectangle" x="19.07" y="91.63" width="34.7" height="6.5" />
       <rect id="Rectangle" x="29.78" y="104.84" width="13.28" height="6.5" />
     </g>
-    <style jsx>{`
-      svg {
+    <style jsx global>{`
+      #ICON_IP {
         font-size: 18px;
         font-weight: 900;
+      }
+      #ICON_IP .text {
+        transform-origin: 124.012px 124.404px 0px !important;
+        will-change: transform;
       }
     `}</style>
   </svg>

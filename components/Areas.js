@@ -10,20 +10,16 @@ import {
 } from './';
 
 const items = [
-  { component: active => <IconTaxLaw active={active} /> },
-  { component: active => <IconCivilLitigation active={active} /> },
-  { component: active => <IconAppeals active={active} /> },
-  { component: active => <IconBusinessLaw active={active} /> },
-  { component: active => <IconIp active={active} /> },
-  { component: active => <IconEntLaw active={active} /> },
+  { component: props => <IconTaxLaw {...props} /> },
+  { component: props => <IconCivilLitigation {...props} /> },
+  { component: props => <IconAppeals {...props} /> },
+  { component: props => <IconBusinessLaw {...props} /> },
+  { component: props => <IconIp {...props} /> },
+  { component: props => <IconEntLaw {...props} /> },
 ];
 
-const Areas = () => {
+const Areas = ({ theta }) => {
   const [active, setActive] = useState(null);
-
-  // const { scrollYProgress } = useViewportScroll();
-  // console.log(scrollYProgress);
-  // return <motion.div style={{ scaleX: scrollYProgress }} />
 
   return (
     <section id="areas" className="flex flex-col">
@@ -38,7 +34,7 @@ const Areas = () => {
                 onHoverStart={() => setActive(index)}
                 onHoverEnd={() => setActive(null)}
               >
-                {item.component(active === index)}
+                {item.component({ active: active === index, theta })}
               </motion.div>
             );
           })}

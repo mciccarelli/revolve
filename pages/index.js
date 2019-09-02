@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import useDimensions from 'react-use-dimensions';
-
 import {
   Nav,
   Hero,
@@ -13,9 +12,13 @@ import {
 
 const HomePage = () => {
   const [ref, { y, height }] = useDimensions();
-  // NOTE: offset by nav height (65) and fix position
+
+  // offset by nav height (65) and fix position
   // when y scroll progress hits bottom of hero
   const navIsSticky = height - 65 <= Math.abs(y);
+
+  // sync scroll progress with rotatation on 360 deg scale
+  const theta = (y * 0.5) % 360;
 
   return (
     <div>
@@ -29,7 +32,7 @@ const HomePage = () => {
         <img className="hero__arrow" src="/static/arrow-down.svg" />
       </Hero>
       <Principles />
-      <Areas />
+      <Areas theta={theta} />
       <Team />
       <Footer />
     </div>
