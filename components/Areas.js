@@ -30,7 +30,7 @@ const Areas = ({ theta }) => {
             return (
               <motion.div
                 key={index}
-                className="w-1/2 lg:w-1/3 flex justify-center mb-12 px-4 lg:px-0"
+                className="w-1/2 md:w-1/3 flex justify-center mb-5 md:mb-12 px-3 lg:px-0 icon"
                 onHoverStart={() => setActive(index)}
                 onHoverEnd={() => setActive(null)}
               >
@@ -40,6 +40,18 @@ const Areas = ({ theta }) => {
           })}
         </div>
       </div>
+      <style jsx global>{`
+        #areas .icon > svg {
+          width: 135px;
+          height: 135px;
+        }
+        @media (min-width: 1024px) {
+          #areas .icon > svg {
+            width: 250px;
+            height: 250px;
+          }
+        }
+      `}</style>
     </section>
   );
 };
