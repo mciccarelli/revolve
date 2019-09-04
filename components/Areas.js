@@ -23,14 +23,14 @@ const Areas = ({ theta }) => {
 
   return (
     <section id="areas" className="flex flex-col">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5 lg:px-0">
         <h2 className="text-center">Areas of expertise</h2>
         <div className="flex flex-wrap">
           {items.map((item, index) => {
             return (
               <motion.div
                 key={index}
-                className="w-full md:w-1/2 lg:w-1/3 flex justify-center mb-12"
+                className="w-1/2 lg:w-1/3 flex justify-center mb-12 px-4 lg:px-0"
                 onHoverStart={() => setActive(index)}
                 onHoverEnd={() => setActive(null)}
               >

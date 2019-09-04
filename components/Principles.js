@@ -36,12 +36,12 @@ const items = [
 ];
 
 const positions = [
-  { a: 0, b: -360 },
+  { a: 0, b: 0 },
   { a: -60, b: -60 },
   { a: -120, b: -120 },
-  { a: -180, b: -180 },
-  { a: -240, b: -240 },
-  { a: -300, b: -300 },
+  { a: -180, b: 180 },
+  { a: -240, b: 120 },
+  { a: -300, b: 60 },
 ];
 
 const Principles = () => {
@@ -105,18 +105,38 @@ const Principles = () => {
         #principles {
           background-color: #f4f4f4;
         }
+
         #principles h2 {
-          margin-bottom: 100px;
+          margin-bottom: 50px;
         }
+
         .body {
-          font-size: 28px;
+          font-size: 14px;
           text-align: center;
           position: absolute;
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          max-width: 400px;
+          max-width: 200px;
           width: 100%;
+        }
+
+        @media (min-width: 640px) {
+          .body {
+            font-size: 18px;
+            max-width: 300px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          #principles h2 {
+            margin-bottom: 100px;
+          }
+
+          .body {
+            font-size: 28px;
+            max-width: 400px;
+          }
         }
       `}</style>
     </section>
