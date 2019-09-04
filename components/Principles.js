@@ -83,25 +83,28 @@ const Principles = () => {
           Our principles <br />
           guide our every move
         </h2>
-        <div className="flex items-center justify-center relative">
-          <Wheel
-            active={active}
-            rotate={rotate}
-            handleTabClick={handleTabClick}
-          />
-          <div className="body">
-            <motion.div
-              initial="visible"
-              animate={showText ? 'visible' : 'hidden'}
-              variants={bodyTextVariants}
-            >
-              <p>{items[active].body}</p>
-            </motion.div>
+        <div className="flex items-center justify-center ">
+          <div className="wheel-container relative">
+            <Wheel
+              active={active}
+              rotate={rotate}
+              handleTabClick={handleTabClick}
+            />
+
+            <div className="body">
+              <motion.div
+                initial="visible"
+                animate={showText ? 'visible' : 'hidden'}
+                variants={bodyTextVariants}
+              >
+                <p>{items[active].body}</p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
-      <style jsx>{`
+      <style jsx global>{`
         #principles {
           background-color: #f4f4f4;
         }
@@ -110,7 +113,15 @@ const Principles = () => {
           margin-bottom: 50px;
         }
 
-        .body {
+        .wheel-container {
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+
+        #principles .body {
           font-size: 14px;
           text-align: center;
           position: absolute;
@@ -122,7 +133,7 @@ const Principles = () => {
         }
 
         @media (min-width: 640px) {
-          .body {
+          #principles .body {
             font-size: 18px;
             max-width: 300px;
           }
@@ -133,7 +144,13 @@ const Principles = () => {
             margin-bottom: 100px;
           }
 
-          .body {
+          .wheel-container {
+            width: 800px;
+            height: 800px;
+            padding: 0;
+          }
+
+          #principles .body {
             font-size: 28px;
             max-width: 400px;
           }
