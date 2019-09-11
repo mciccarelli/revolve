@@ -60,7 +60,11 @@ const Footer = () => (
               <p>&copy; 2019 Revolve Law Group </p>
               <p>
                 Design by{' '}
-                <a href="http://brittcobb.com" target="_blank">
+                <a
+                  className="credit"
+                  href="http://brittcobb.com"
+                  target="_blank"
+                >
                   Britt Cobb
                 </a>
               </p>
@@ -85,6 +89,9 @@ const Footer = () => (
       #footer .legal p {
         font-size: 12px;
         margin-bottom: 24px;
+      }
+      .credit {
+        text-decoration: underline;
       }
       @media (min-width: 1024px) {
         #footer h5 {

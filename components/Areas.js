@@ -19,8 +19,6 @@ const items = [
 ];
 
 const Areas = ({ theta }) => {
-  const [active, setActive] = useState(null);
-
   return (
     <section id="areas" className="flex flex-col">
       <div className="container mx-auto px-5 lg:px-0">
@@ -30,11 +28,9 @@ const Areas = ({ theta }) => {
             return (
               <motion.div
                 key={index}
-                className="w-1/2 md:w-1/3 flex justify-center mb-5 md:mb-12 px-3 lg:px-0 icon"
-                onHoverStart={() => setActive(index)}
-                onHoverEnd={() => setActive(null)}
+                className="w-full sm:w-1/2 md:w-1/3 flex justify-center mb-12 px-2 lg:px-0 icon"
               >
-                {item.component({ active: active === index, theta })}
+                {item.component({ theta })}
               </motion.div>
             );
           })}
@@ -42,8 +38,11 @@ const Areas = ({ theta }) => {
       </div>
       <style jsx global>{`
         #areas .icon > svg {
-          width: 135px;
-          height: 135px;
+          width: 175px;
+          height: 175px;
+        }
+        #areas .icon > svg > g {
+          will-change: transform;
         }
         @media (min-width: 1024px) {
           #areas .icon > svg {

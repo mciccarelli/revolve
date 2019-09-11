@@ -5,9 +5,9 @@ const container = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.3,
+      delay: 0.25,
       when: 'beforeChildren',
-      staggerChildren: 0.5,
+      staggerChildren: 0.35,
     },
   },
 };
@@ -28,7 +28,7 @@ const logo = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 3, delay: 2.5 },
+    transition: { duration: 2, delay: 1.5 },
   },
 };
 
@@ -70,7 +70,7 @@ export default () => (
     </motion.svg>
     <style jsx global>{`
       .intro {
-        width: 80%;
+        width: 90%;
         height: 0;
         padding-top: 78%;
         position: relative;
@@ -80,6 +80,12 @@ export default () => (
         top: 0;
         left: 0;
         display: block;
+      }
+
+      @media (min-width: 640px) {
+        .intro {
+          width: 80%;
+        }
       }
 
       @media (min-width: 1024px) {

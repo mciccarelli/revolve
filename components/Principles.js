@@ -35,14 +35,87 @@ const items = [
   },
 ];
 
-const positions = [
-  { a: 0, b: 0 },
-  { a: -60, b: -60 },
-  { a: -120, b: -120 },
-  { a: -180, b: 180 },
-  { a: -240, b: 120 },
-  { a: -300, b: 60 },
-];
+const getNewRotation = (i, current) => {
+  switch (current) {
+    case 0:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return 180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+      break;
+    case -60:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return -180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+      break;
+    case -120:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return -180;
+      if (i === 4) return -240;
+      if (i === 5) return 60;
+      break;
+    case -180:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return -180;
+      if (i === 4) return -240;
+      if (i === 5) return -300;
+      break;
+    case 180:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return 180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+      break;
+    case -240:
+      if (i === 0) return -360;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return -180;
+      if (i === 4) return -240;
+      if (i === 5) return -300;
+    case -300:
+      if (i === 0) return -360;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return -180;
+      if (i === 4) return -240;
+      if (i === 5) return -300;
+    case -360:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return 180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+    case 120:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return 180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+      break;
+    case 60:
+      if (i === 0) return 0;
+      if (i === 1) return -60;
+      if (i === 2) return -120;
+      if (i === 3) return 180;
+      if (i === 4) return 120;
+      if (i === 5) return 60;
+      break;
+  }
+};
 
 const Principles = () => {
   const [active, setActive] = useState(0);
@@ -60,12 +133,9 @@ const Principles = () => {
     if (active === i) return;
     // hide body text
     setShowText(false);
-    // update rotation based on item in wheel
-    const r = active >= 3 ? positions[i].b : positions[i].a;
-    // update to next active item on .3s delay
-    setTimeout(() => setActive(i), 300);
-    // update rotation value .3s delay
-    setTimeout(() => setRotate(r), 300);
+    const newRotate = getNewRotation(i, rotate);
+    setActive(i);
+    setRotate(newRotate);
   };
 
   const bodyTextVariants = {
