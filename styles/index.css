@@ -26,6 +26,10 @@ h6 {
   text-transform: uppercase;
 }
 
+a:hover {
+  color: #444444;
+}
+
 section {
   background-color: white;
   color: black;

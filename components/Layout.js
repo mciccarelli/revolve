@@ -63,7 +63,7 @@ const Layout = ({ title }) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </Head>
-      <Hero childRef={heroRef} sticky={navIsSticky} isDesktop={isDesktop}>
+      <Hero childRef={heroRef} showArrow={!navIsSticky} isDesktop={isDesktop}>
         {isDesktop ? (
           <Nav sticky={navIsSticky} />
         ) : (

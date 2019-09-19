@@ -125,24 +125,25 @@ const Principles = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowText(true);
-    }, 300);
+    }, 200);
     return () => clearTimeout(timer);
   }, [, active]);
 
-  const handleTabClick = i => {
+  const handleTabClick = async i => {
     if (active === i) return;
+
     // hide body text
     setShowText(false);
-    const newRotate = getNewRotation(i, rotate);
-    setActive(i);
-    setRotate(newRotate);
+
+    await setRotate(getNewRotation(i, rotate));
+    setTimeout(() => setActive(i), 400);
   };
 
   const bodyTextVariants = {
     hidden: { opacity: 0, transition: { duration: 0.3 } },
     visible: {
       opacity: 1,
-      transition: { duration: 0.3, delay: 0.6 },
+      transition: { duration: 0.3 },
     },
   };
 

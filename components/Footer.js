@@ -3,7 +3,7 @@ const Footer = () => (
     <img className="footer__logo" src="/static/footer-logo.svg" />
     <div className="container mx-auto px-5 lg:px-0 relative z-20">
       <div className="flex flex-wrap">
-        <div className="w-full md:w-1/3 lg:w-1/4">
+        <div className="w-full md:w-1/2 lg:w-1/4">
           <div className="mb-5">
             <h5>Revolve Law Group LLP</h5>
             <p>
@@ -13,7 +13,7 @@ const Footer = () => (
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/3 lg:w-1/4">
+        <div className="w-full md:w-1/2 lg:w-1/4">
           <div className="mb-5">
             <h5>General inquiries</h5>
             <p>
@@ -44,7 +44,7 @@ const Footer = () => (
             </p>
           </div>
         </div>
-        <div className="w-full md:w-1/3 lg:w-2/4">
+        <div className="w-full mt-10 lg:mt-0 lg:w-2/4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2">{``}</div>
             <div className="w-full lg:w-1/2 legal">

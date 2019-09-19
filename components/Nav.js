@@ -1,15 +1,26 @@
 import cx from 'classnames';
+import { motion } from 'framer-motion';
+
+const variants = {
+  hidden: { y: '100%' },
+  visible: { y: 0 },
+};
 
 const Nav = ({ sticky }) => {
   return (
-    <nav className={cx('nav', { 'nav--sticky': sticky })}>
+    <motion.nav
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      className={cx('nav', { 'nav--sticky': sticky })}
+    >
       <ul className="flex justify-between items-center ">
         <h1>REVOLVE Law Group</h1>
         <div className="flex justify-between items-center">
           <h2>A Law Firm based in Irvine, California</h2>
         </div>
       </ul>
-      <style jsx>{`
+      <style jsx global>{`
         .nav {
           position: absolute;
           left: 0;
@@ -27,22 +38,22 @@ const Nav = ({ sticky }) => {
           bottom: auto;
         }
 
-        ul {
+        .nav ul {
           max-width: var(--max-width);
           margin: 0 auto;
         }
 
-        h1 {
+        .nav h1 {
           font-size: 16px;
           font-weight: 900;
         }
 
-        h2 {
+        .nav h2 {
           font-size: 12px;
           font-weight: 500;
         }
       `}</style>
-    </nav>
+    </motion.nav>
   );
 };
 

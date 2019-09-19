@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useWindowDimensions } from '../state/';
 
-const Responsive = ({ breakPoint = 576, renderMobile, renderDesktop }) => {
+const Responsive = ({
+  width,
+  breakPoint = 640,
+  renderMobile,
+  renderDesktop,
+}) => {
   const [ready, set] = useState(false);
-  const { width } = useWindowDimensions();
 
   // NOTE: need this hack to delay render conditional during ssr
   useEffect(() => {
