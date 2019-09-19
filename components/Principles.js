@@ -16,7 +16,7 @@ const items = [
   {
     header: 'COMPASSION',
     body:
-      'Law is emotionally taxing and physically exhausting. And that’s how we feel about it. We get that it is worse for you and we won’t forget it.',
+      'Law is emotionally taxing and physically exhausting. And that’s how we feel about it. We get that it is worse for you, and we won’t forget it.',
   },
   {
     header: 'INTEGRITY',
@@ -26,7 +26,7 @@ const items = [
   {
     header: 'HUMOR',
     body:
-      'The practice of law is a serious business but it doesn’t have to be without laughter. Laughter improves health, overall quality of life, and leads to greater productivity.',
+      'The practice of law is a serious business, but it doesn’t have to be without laughter. Laughter improves health, overall quality of life, and leads to greater productivity.',
   },
   {
     header: 'CURIOSITY',

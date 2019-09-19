@@ -11,7 +11,7 @@ export const data = {
     most importantly, family. It’s not just dollars, it’s time
     and opportunity—time you took away from your family so
     those dollars earned could provide better opportunities
-    for them. I care too much because I know you do too.`,
+    for them. I care too much because I know you do, too.`,
     },
     {
       name: 'Kimberly Wright, EsQ',
