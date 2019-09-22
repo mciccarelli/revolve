@@ -93,14 +93,14 @@ const Team = React.forwardRef((props, ref) => {
           margin-bottom: 90px;
         }
         #team p {
-          font-size: 18px;
-          font-weight: 800;
+          font-size: 14px;
         }
         #team .avatar img {
           width: 200px;
           height: 200px;
           max-width: 100%;
           display: block;
+          margin: 0 auto;
           background: white;
           border-radius: 50%;
         }
@@ -121,6 +121,9 @@ const Team = React.forwardRef((props, ref) => {
             padding-right: 100px;
             padding-left: 0;
           }
+          #team .person-row:nth-child(2n) .avatar {
+            margin-top: 30px;
+          }
           #team .person-row::after {
             content: '';
             display: block;
@@ -140,7 +143,7 @@ const Team = React.forwardRef((props, ref) => {
             height: 300px;
           }
           #team p {
-            font-size: 30px;
+            font-size: 24px;
           }
           #team .bio-text p {
             padding-left: 100px;

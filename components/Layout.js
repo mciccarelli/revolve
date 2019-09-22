@@ -14,7 +14,7 @@ import {
 const DEKTOP_BREAKPOINT = 1024;
 const NAVBAR_HEIGHT = 65;
 
-const Layout = ({ title }) => {
+const Layout = ({ title, description }) => {
   const [heroRef, { width, height: heroHeight }] = useDimensions();
   const [teamRef, { y: teamY, height: teamHeight }] = useDimensions({
     liveMeasure: false,
@@ -34,7 +34,7 @@ const Layout = ({ title }) => {
   }, []);
 
   useLayoutEffect(() => {
-    if (!teamIsVisible && teamY <= scrolled + teamHeight * 0.25) {
+    if (!teamIsVisible && teamY <= scrolled + teamHeight * 0.5) {
       setTeamVisible(true);
     }
   }, [scrolled]);
@@ -61,6 +61,11 @@ const Layout = ({ title }) => {
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta name="description" content={description} />
+        <meta
+          name="keywords"
+          content="irvine lawyer, orange county lawyer, tax law, business law, civil litigation, intellectual property, ip law, appeals and writs, entertainment law, tax deferral, 453"
         />
       </Head>
       <Hero childRef={heroRef} showArrow={!navIsSticky} isDesktop={isDesktop}>
