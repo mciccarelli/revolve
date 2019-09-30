@@ -1,9 +1,10 @@
 {
   "scope": "revolve",
   "version": 2,
-  "public": true,
   "alias": [
-    "revolve"
+    "revolve",
+    "revolvelawgroup.com",
+    "www.revolvelawgroup.com"
   ],
   "builds": [
     {
