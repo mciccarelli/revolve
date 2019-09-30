@@ -22,7 +22,7 @@ const Intro = () => {
     visible: i => ({
       opacity: 1,
       transition: {
-        duration: 2.5,
+        duration: 0.2,
         delay: i * 0.4,
       },
     }),
