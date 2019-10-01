@@ -14,15 +14,16 @@ const items = [
       'Uncivil conduct leads to grave mistakes. We heed our grandmas’ advice: be kind, be courteous, act ethically and no mudslinging. Effective counsel hinges on respect.',
   },
   {
-    header: 'COMPASSION',
-    body:
-      'Law is emotionally taxing and physically exhausting. And that’s how we feel about it. We get that it is worse for you, and we won’t forget it.',
-  },
-  {
     header: 'INTEGRITY',
     body:
       'We are who we say we are. We do what we say we will do. It’s just that simple.',
   },
+  {
+    header: 'COMPASSION',
+    body:
+      'Law is emotionally taxing and physically exhausting. And that’s how we feel about it. We get that it is worse for you, and we won’t forget it.',
+  },
+
   {
     header: 'HUMOR',
     body:
@@ -212,9 +213,26 @@ const Principles = () => {
 
         @media (min-width: 1024px) {
           #principles h2 {
-            margin-bottom: 100px;
+            margin-bottom: 50px;
           }
 
+          .wheel-container {
+            width: 600px;
+            height: 600px;
+            padding: 0;
+          }
+
+          #principles .body {
+            max-width: 390px;
+            font-size: 16px;
+          }
+        }
+
+        @media (min-width: 1280px) {
+          #principles h2 {
+            margin-bottom: 100px;
+          }
+          
           .wheel-container {
             width: 800px;
             height: 800px;

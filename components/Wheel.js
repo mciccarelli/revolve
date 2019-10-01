@@ -20,6 +20,7 @@ export default ({ active, handleTabClick, rotate }) => (
       />
       <g
         className="tab"
+        fill="red"
         fill={active === 5 ? '#000000' : '#DCDCDC'}
         onClick={() => handleTabClick(5)}
       >

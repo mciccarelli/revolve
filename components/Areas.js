@@ -36,13 +36,20 @@ const Areas = ({ theta }) => (
     </div>
     <style jsx global>{`
       #areas .icon > svg {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
       }
       #areas .icon > svg > g {
         will-change: transform;
       }
       @media (min-width: 1024px) {
+        #areas .icon > svg {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      @media (min-width: 1280px) {
         #areas .icon > svg {
           width: 250px;
           height: 250px;
