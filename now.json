@@ -1,11 +1,5 @@
 {
   "scope": "revolve",
-  "version": 2,
-  "alias": [
-    "revolve",
-    "revolvelawgroup.com",
-    "www.revolvelawgroup.com"
-  ],
   "builds": [
     {
       "src": "next.config.js",

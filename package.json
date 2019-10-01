@@ -6,7 +6,7 @@
     "build": "next build",
     "now-build": "next build",
     "start": "next start",
-    "deploy": "now && now --target production"
+    "deploy": "now --prod"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
