@@ -68,6 +68,15 @@ const Footer = () => (
                   Britt Cobb
                 </a>
               </p>
+              <p>
+                <a
+                  className="credit"
+                  href="https://www.trust-cfo.com/prp-accelerator/?referrer=revolvelawgroup.com"
+                  target="_blank"
+                >
+                  PRP Accelerator
+                </a>
+              </p>
             </div>
           </div>
         </div>
