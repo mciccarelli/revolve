@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import useDimensions from 'react-use-dimensions';
 import {
@@ -16,11 +16,7 @@ const NAVBAR_HEIGHT = 65;
 
 const Layout = ({ title, description }) => {
   const [heroRef, { width, height: heroHeight }] = useDimensions();
-  const [teamRef, { y: teamY, height: teamHeight }] = useDimensions({
-    liveMeasure: false,
-  });
   const [scrolled, setScrolled] = useState(0);
-  const [teamIsVisible, setTeamVisible] = useState(false);
 
   useEffect(() => {
     // window == undefined on server
@@ -32,12 +28,6 @@ const Layout = ({ title, description }) => {
       };
     }
   }, []);
-
-  useLayoutEffect(() => {
-    if (!teamIsVisible && teamY <= scrolled + teamHeight * 0.5) {
-      setTeamVisible(true);
-    }
-  }, [scrolled]);
 
   const onScroll = () => {
     const { scrollTop } = document.documentElement;
@@ -78,7 +68,7 @@ const Layout = ({ title, description }) => {
       </Hero>
       <Principles />
       <Areas theta={theta} />
-      <Team ref={teamRef} isVisible={teamIsVisible} />
+      <Team />
       <Footer />
       <style jsx>{`
         .page-title--mobile {
