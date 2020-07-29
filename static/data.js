@@ -5,7 +5,7 @@ export const data = {
       title: 'Partner',
       image: '/static/JESSICA.jpg',
       bio: `I care too much. I watched my dad, a small business owner, 
-      be affected by every penny taxed or saved. I saw the
+      affected by every penny taxed or saved. I saw the
       effects of insufficient and even bad advice. I know how
       every dollar earned or taken away affects business, and
       most importantly, family. It’s not just dollars, it’s time
