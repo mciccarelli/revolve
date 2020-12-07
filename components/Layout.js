@@ -52,11 +52,33 @@ const Layout = ({ title, description }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta
           name="keywords"
           content="irvine lawyer, orange county lawyer, tax law, business law, civil litigation, intellectual property, ip law, appeals and writs, entertainment law, tax deferral, 453"
         />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="revolvelawgroup" key="twhandle" />
+        {/* Open Graph */}
+        <meta
+          property="og:url"
+          content="https://revolvelawgroup.com"
+          key="ogurl"
+        />
+        <meta
+          property="og:image"
+          content="/static/REVOLVE_LAW_GROUP_OG.jpg"
+          key="ogimage"
+        />
+        <meta
+          property="og:site_name"
+          content="Revolve Law Group"
+          key="ogsitename"
+        />
+        <meta property="og:title" content={title} key="ogtitle" />
+        <meta property="og:description" content={description} key="ogdesc" />
       </Head>
       <Hero childRef={heroRef} showArrow={!navIsSticky} isDesktop={isDesktop}>
         {isDesktop ? (

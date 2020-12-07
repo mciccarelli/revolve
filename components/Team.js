@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { data } from '../static/data';
+import { data } from '../public/static/data';
 const { people } = data;
 
 const Team = (props) => (
