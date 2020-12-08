@@ -69,7 +69,7 @@ const Layout = ({ title, description }) => {
         />
         <meta
           property="og:image"
-          content="/static/REVOLVE_LAW_GROUP_OG.jpg"
+          content="/static/REVOLVE_LAW_GROUP_OG_ANIMATION.gif"
           key="ogimage"
         />
         <meta
