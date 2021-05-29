@@ -4,7 +4,7 @@ import {
   IconCivilLitigation,
   IconAppeals,
   IconBusinessLaw,
-  IconTaxMitigation,
+  IconRealEstate,
   IconAssetProtection,
 } from './';
 
@@ -13,8 +13,8 @@ const items = [
   { component: (props) => <IconCivilLitigation {...props} /> },
   { component: (props) => <IconAppeals {...props} /> },
   { component: (props) => <IconBusinessLaw {...props} /> },
-  { component: (props) => <IconTaxMitigation {...props} /> },
   { component: (props) => <IconAssetProtection {...props} /> },
+  { component: (props) => <IconRealEstate {...props} /> },
 ];
 
 const Areas = ({ theta }) => (
