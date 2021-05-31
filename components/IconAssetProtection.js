@@ -9,7 +9,7 @@ export default ({ theta }) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g id="REVOLVE_TAX_ASSET_PROTECTION 1" clip-path="url(#clip0)">
+    <g id="REVOLVE_TAX_ASSET_PROTECTION">
       <g id="Group 2">
         <path
           id="Vector"
@@ -178,11 +178,6 @@ export default ({ theta }) => (
         </text>
       </motion.g>
     </g>
-    <defs>
-      <clipPath id="clip0">
-        <rect width="250" height="250" fill="white" />
-      </clipPath>
-    </defs>
 
     <style jsx global>{`
       #ICON_AP {

@@ -28,7 +28,8 @@ const Footer = () => (
           <div className="mb-5">
             <h5>Jessica Monroe</h5>
             <p>
-              833.775.4557 x 1<br />
+              <a href="tel:833-775-4557p1">833.775.4557 x 1</a>
+              <br />
               <a href="mailto:jessica@revolvelawgroup.com">
                 jessica@revolvelawgroup.com
               </a>
@@ -37,9 +38,20 @@ const Footer = () => (
           <div className="mb-5">
             <h5>Kimberly Wright</h5>
             <p>
-              833.775.4557 x 2<br />
+              <a href="tel:833-775-4557p2">833.775.4557 x 2</a>
+              <br />
               <a href="mailto:kimberly@revolvelawgroup.com">
                 kimberly@revolvelawgroup.com
+              </a>
+            </p>
+          </div>
+          <div className="mb-5">
+            <h5>Sara Naheedy</h5>
+            <p>
+              <a href="tel:833-775-4557p3">833.775.4557 x 3</a>
+              <br />
+              <a href="mailto:sara@revolvelawgroup.com">
+                sara@revolvelawgroup.com
               </a>
             </p>
           </div>
