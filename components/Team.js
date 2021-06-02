@@ -108,13 +108,13 @@ const Team = (props) => {
         }
 
         #team .bio-container .accordion header {
-          margin-bottom: 0;
+          margin-bottom: .5em;
         }
         #team .bio-container h5 {
           color: white;
         }
-        #team .bio-container .lines div {
-          background-color: white !important;
+        #team .bio-container .accordion .toggle .circle > div {
+          background-color: white;
         }
         #team .person-card--empty .avatar {
           border-radius: 50%;

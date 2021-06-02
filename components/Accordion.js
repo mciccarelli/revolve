@@ -9,9 +9,11 @@ const Accordion = ({ i, label, children, expanded, setExpanded }) => {
     <div className="accordion">
       <header onClick={() => setExpanded(isOpen ? false : i)}>
         <h5>{label}</h5>
-        <div className="lines">
-          <motion.div initial={false} animate={{ rotate: isOpen ? 0 : 90 }} />
-          <div />
+        <div className="toggle">
+          <div className="circle">
+            <motion.div initial={false} animate={{ rotate: isOpen ? 0 : 90 }} />
+            <div />
+          </div>
         </div>
       </header>
       <AnimatePresence initial={false}>
@@ -62,18 +64,27 @@ const Accordion = ({ i, label, children, expanded, setExpanded }) => {
           margin-bottom: 2rem;
         }
 
-        .accordion header .lines {
+        .accordion .toggle {
           display: inline-block;
-          width: 24px;
-          height: 24px;
-          position: relative;
         }
 
-        .accordion header .lines div {
+        .accordion .toggle .circle {
+          position: relative;
+          width: 2.55em;
+          height: 2.5em;
+          border-radius: 100%;
+          border: solid 2px #dcdcdc;
+        }
+
+        .accordion .toggle .circle > div {
           position: absolute;
-          width: 100%;
-          height: 1px;
-          background: black;
+          background-color: black;
+          width: 24px;
+          height: 2px;
+          left: 50%;
+          margin-left: -12px;
+          top: 50%;
+          margin-top: -1px;
         }
 
         .accordion .word {
