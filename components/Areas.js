@@ -56,6 +56,11 @@ const Areas = ({ theta }) => {
                       Board
                     </li>
                     <li>
+                      Controversies before the EDD and CA Department of Tax and
+                      Fee Administration
+                    </li>
+                    <li>Tax liability resolution</li>
+                    <li>
                       Mitigation strategies to reduce taxes on capital gains and
                       offset yearly tax obligations
                     </li>
