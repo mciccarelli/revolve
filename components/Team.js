@@ -58,7 +58,9 @@ const Team = (props) => {
           ))}
           <div className="person-card person-card--empty flex justify-center w-full md:w-1/2">
             <div className="w-full flex flex-col">
-              <div className="avatar block mx-auto mb-8" />
+              <div className="avatar block mx-auto mb-8">
+                <img src="/static/REVOLVE_DOTTED_CIRCLE_WHITE.svg" />
+              </div>
               <h5 className="text-white text-center caption">
                 OUR TEAM IS GROWING <br />
                 STAY TUNED
@@ -80,7 +82,6 @@ const Team = (props) => {
           max-width: 100%;
           display: block;
           margin: 0 auto;
-          background: white;
           border-radius: 50%;
         }
         #team .caption {
@@ -108,7 +109,7 @@ const Team = (props) => {
         }
 
         #team .bio-container .accordion header {
-          margin-bottom: .5em;
+          margin-bottom: 0.5em;
         }
         #team .bio-container h5 {
           color: white;
@@ -116,19 +117,12 @@ const Team = (props) => {
         #team .bio-container .accordion .toggle .circle > div {
           background-color: white;
         }
-        #team .person-card--empty .avatar {
-          border-radius: 50%;
-          width: 200px;
-          height: 200px;
-          border: 3px dotted white;
-        }
 
         @media (min-width: 1024px) {
           #team .person-grid .person-card:nth-child(2n) {
             transform: translateY(150px);
             margin-bottom: 150px;
           }
-          #team .person-card--empty .avatar,
           #team .avatar img {
             width: 300px;
             height: 300px;

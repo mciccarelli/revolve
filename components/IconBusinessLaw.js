@@ -83,30 +83,6 @@ export default ({ theta }) => (
             S
           </tspan>
         </text>
-        <text
-          id="L"
-          transform="translate(43.084446, 114.534412) rotate(141.072456) translate(-43.084446, -114.534412) "
-        >
-          <tspan x="37.0685668" y="121.502654">
-            L
-          </tspan>
-        </text>
-        <text
-          id="A"
-          transform="translate(31.364446, 122.894412) rotate(148.055247) translate(-31.364446, -122.894412) "
-        >
-          <tspan x="24.3525558" y="129.87403">
-            A
-          </tspan>
-        </text>
-        <text
-          id="W"
-          transform="translate(14.509446, 131.469412) rotate(158.304891) translate(-14.509446, -131.469412) "
-        >
-          <tspan x="4" y="138.458617">
-            W
-          </tspan>
-        </text>
       </g>
     </motion.g>
     <g
