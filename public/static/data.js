@@ -5,7 +5,7 @@ export const data = {
       title: 'Founder & Managing Partner',
       email: 'kimberly@revolvelawgroup.com',
       phone: '833-775-4557',
-      phoneExt: '2',
+      phoneExt: '102',
       image: '/static/KIMBERLY.jpg',
       bio: `I was taught to be vigorously honest, endlessly curious, 
       and immensely resourceful. I will earnestly tell you what I can 
@@ -19,7 +19,7 @@ export const data = {
       title: 'Founder & Partner',
       email: 'jessica@revolvelawgroup.com',
       phone: '833-775-4557',
-      phoneExt: '1',
+      phoneExt: '103',
       image: '/static/JESSICA.jpg',
       bio: `I care too much. I watched my dad, a small business owner, 
       affected by every penny taxed or saved. I saw the
@@ -35,7 +35,7 @@ export const data = {
       title: 'Co-Managing Partner',
       email: 'sara@revolvelawgroup.com',
       phone: '833-775-4557',
-      phoneExt: '3',
+      phoneExt: '104',
       image: '/static/SARA.jpg',
       bio: `I seek to always act with purity of intention and a quality of being 
       rooted in truthfulness, accountability and commitment to the betterment of others. 

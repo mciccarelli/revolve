@@ -21,8 +21,9 @@ const Footer = () => (
                 info@revolvelawgroup.com
               </a>
               <br />
-              T: 833.775.4557 <br />
-              F: 888.711.7710
+              T: <a href="tel:833-775-4557">833.775.4557</a>
+              <br />
+              F: 949.944.9404
             </p>
           </div>
         </div>

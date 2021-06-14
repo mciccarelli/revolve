@@ -48,7 +48,7 @@ const Team = (props) => {
                         className="phone"
                         href={`tel:${person.phone}p${person.phoneExt}`}
                       >
-                        {person.phone.replace('-', '.')} x {person.phoneExt}
+                        {person.phone.replace(/-/g, '.')} x {person.phoneExt}
                       </a>
                     </div>
                   </Accordion>
